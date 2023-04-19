@@ -241,21 +241,21 @@ export class AuthJwtService {
     })
 
     res.cookie('Refresh', refresh_token, {
-      httpOnly: true,
+      httpOnly: false,
       secure: false,
       sameSite: 'none',
       expires: new Date(Date.now() + 1000 * 60 * EXPIRES_IN_RT_MIN),
     })
 
     res.cookie('RtSessionId', rt_session_id, {
-      httpOnly: true,
+      httpOnly: false,
       secure: false,
       sameSite: 'none',
       expires: new Date(Date.now() + 1000 * 60 * EXPIRES_IN_RT_MIN),
     })
 
     res.cookie('UserId', user_id, {
-      httpOnly: true,
+      httpOnly: false,
       secure: false,
       sameSite: 'none',
       expires: new Date(Date.now() + 1000 * 60 * EXPIRES_IN_RT_MIN),
